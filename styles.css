@@ -1,0 +1,608 @@
+@font-face {
+    font-family: 'NotoSans';
+    src: url('font/NotoSans-Regular.ttf') format('ttf'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'NotoSans', "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI",Roboto, Oxygen, Ubuntu, Cantarell,"Open Sans","Helvetica Neue", sans-serif; 
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+/* Header */
+header {
+    padding: 0px;
+    background-image: url('images/background-image.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: -5cqw;
+    color: #fff;
+    text-align: center;
+}
+
+/* Header overlay */
+header .overlay {
+    position: relative;
+    background-color: rgba(64, 64, 64, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Text shadow, transition, & animation for the title */
+#title {
+    text-shadow: 4px 4px 8px #f9f9f9;
+    animation: slide-in 1s ease-in-out;
+    transition: color 0.3s ease-in-out;
+  }
+  
+@keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  #title:hover {
+    color: #ffdab9;
+    text-shadow: 4px 4px 8px #ffdab9;
+  }
+
+/* Navigation */
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+.nav-bar {
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 auto;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3em;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: blueviolet;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    margin-right: auto;
+    padding-left: 0.5em;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.5 ease-in-out;
+    background-color: #fff;
+}
+
+/* Main Content */
+main {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+/* Album Gallery */
+.album-gallery {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    overflow: hidden;
+    gap: 20px;
+    padding: 20px;
+}
+
+.album-gallery figure {
+    width: 300px;
+    height: auto;
+}
+
+.album-gallery img {
+    width: 300px;
+    height: auto;
+}
+
+.album-gallery figcaption {
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Make the images in image-gallery grayscale, then coloured when hovered over */
+.album-gallery .album-cover {
+    /* convert image to grayscale */
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.album-gallery .album-cover:hover {
+    /* remove the grayscale filter on hover */
+    filter: grayscale(0%);
+}
+
+/* Videos */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-caption {
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 6px;
+}
+
+/* Sidebar */
+aside {
+    background: grey;
+    color: #fff;
+    padding: 20px;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+aside a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Grid wrapper for Videos and Sidebar */
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Image carousel */
+.carousel {
+    position: relative;
+    height: 200px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.carousel picture:nth-child(1) img {
+    animation-name: carousel1;
+}
+
+.carousel picture:nth-child(2) img {
+    animation-name: carousel2;
+}
+
+.carousel picture:nth-child(3) img {
+    animation-name: carousel3;
+}
+
+.carousel picture:nth-child(4) img {
+    animation-name: carousel4;
+}
+
+.carousel picture:nth-child(5) img {
+    animation-name: carousel5;
+}
+
+.carousel picture:nth-child(6) img {
+    animation-name: carousel6;
+}
+
+.carousel picture:nth-child(7) img {
+    animation-name: carousel7;
+}
+	
+.carousel picture:nth-child(8) img {
+    animation-name: carousel8;
+}
+
+@keyframes carousel1 {
+    0%    { opacity: 1; }
+    12.5% { opacity: 1; }
+    25%   { opacity: 0; }
+    100%  { opacity: 0; }
+}
+
+@keyframes carousel2 {
+    0%    { opacity: 0; }
+    25%   { opacity: 1; }
+    37.5% { opacity: 1; }
+    50%   { opacity: 0; }
+    100%  { opacity: 0; }
+}
+
+@keyframes carousel3 {
+    0%    { opacity: 0; }
+    50%   { opacity: 1; }
+    62.5% { opacity: 1; }
+    75%   { opacity: 0; }
+    100%  { opacity: 0; }
+}
+
+@keyframes carousel4 {
+    0%    { opacity: 0; }
+    75%   { opacity: 1; }
+    87.5% { opacity: 1; }
+    100%  { opacity: 0; }
+}
+
+@keyframes carousel5 {
+    0%    { opacity: 0; }
+    100%  { opacity: 1; }
+    112.5% { opacity: 1; }
+    125%   { opacity: 0; }
+    100%  { opacity: 0; }
+}
+
+@keyframes carousel6 {
+    0%    { opacity: 0; }
+    125%   { opacity: 1; }
+    137.5% { opacity: 1; }
+    150%   { opacity: 0; }
+    100%  { opacity: 0; }
+}
+
+@keyframes carousel7 {
+    0%    { opacity: 0; }
+    150%   { opacity: 1; }
+    162.5% { opacity: 1; }
+    175%   { opacity: 0; }
+    100%  { opacity: 0; }
+}
+
+@keyframes carousel8 {
+    0%    { opacity: 0; }
+    175% { opacity: 1; }
+    187.5%  { opacity: 1; }
+    200%  { opacity: 0; }
+}
+
+.carousel img {
+    position: absolute;
+	width: 100%;
+	height: auto;
+    animation-duration: 8s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+/* Ticket form */
+#ticket-form {
+    width: 75%;
+    max-width: 576px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    background-color: #f7f7f7;
+    color: #080808;
+    border-radius: 5px;
+}
+
+.form-field {
+    margin: 1em;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="number"],
+.form-field select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#ticket-form label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+#ticket-form legend {
+    margin-bottom: 0;
+}
+
+#ticket-form input[type="text"], #ticket-form input[type="email"], #ticket-form select, #ticket-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#ticket-form input[type="number"] {
+    width: calc(100% - 1em);
+}
+
+#ticket-form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #c5e3ec;
+    color: #00000D;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+#ticket-form #purchase-ticket {
+    background-color: #c5e3ec;
+    color: #00000D;
+    padding: 12px;
+    border: none;
+}
+
+#ticket-form fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#ticket-form legend {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
+
+/* For mobile screens */
+@media screen and (max-width: 768px) {
+
+    /* Display the hamburger menu when the screen is <768 px */
+    .hamburger {
+        display: block;
+        z-index: 20;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+        z-index: 20;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        z-index: 20;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        z-index: 20;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #333;
+        width: 50%;
+        text-align: center;
+        transition: 0.5s ease;
+        z-index: 15;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+        z-index: 15;
+    }
+
+    .nav-menu.active {
+        left: 0;
+        z-index: 15;
+    }
+
+    /* Shows the image gallery as one grid column in mobile screens */
+    .album-gallery {
+        grid-template-columns: 1fr;
+        overflow-x: hidden;
+        z-index: 10;
+        display: flex;
+        justify-content: center;  /* This will horizontally center the child elements */
+        align-items: center;  /* This will vertically center the child elements */
+        flex-wrap: wrap; /* This allows the flex items to wrap onto multiple lines if needed */
+        }
+        
+    }
+
+    .album-gallery figure {
+        max-width: 300px;
+        height: auto;
+        z-index: 10;
+    }
+
+    /* Makes .grid-wrapper for Videos and Sidebar one column in mobile screens */
+    .grid-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    /* Limits the form width */
+    #ticket-form {
+        max-width: 576px;
+    }
+}
+
+/* Dark mode toggle */
+#dark-mode-toggle {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+body[data-theme="light"] #toggle-text {
+    color: #000;
+}
+
+body[data-theme="dark"] #toggle-text {
+    color: #f4f4f4;
+}
+
+body[data-theme="dark"] {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+body[data-theme="dark"] a {
+    color: #f4f4f4;
+}
+
+body[data-theme="dark"] aside {
+    background: #666;
+}
+
+body[data-theme="dark"] header {
+    color: #333;
+}
+
+body[data-theme="dark"] footer {
+    background: #999;
+}
+
+body[data-theme="dark"] #ticket-form {
+    background-color: #080808;
+    background: #060606;
+    color: #f7f7f7;
+}
+
+body[data-theme="dark"] #ticket-form label, 
+body[data-theme="dark"] #ticket-form legend {
+    color: #f7f7f7;
+}
+
+body[data-theme="dark"] #ticket-form input,
+body[data-theme="dark"] #ticket-form textarea,
+body[data-theme="dark"] #ticket-form select {
+    background-color: #202020;
+    color: #f7f7f7;
+    border-color: #ffffff;
+}
+
+body[data-theme="dark"] #ticket-form fieldset {
+    border: 1px solid #333;
+    color: #f7f7f7;
+}
+
+body[data-theme="dark"] #ticket-form input[type="submit"] {
+    background-color: #00008d;
+    color: #f7f7ce;
+}
+
+body[data-theme="dark"] #ticket-form #purchase-ticket {
+    background-color: #00008d;
+    color: #f7f7ce;
+}
+
+.toggle-switch {
+    position: absolute;
+    right: 17.5px;
+    top: 10px;
+}
+
+.toggle-switch #toggle-text {
+    position: absolute;
+}
+
+.toggle-switch-checkbox {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.toggle-switch-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 26px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.toggle-switch-label::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.toggle-switch-checkbox:checked + .toggle-switch-label {
+    background: #4CAF50;
+}
+
+.toggle-switch-checkbox:checked + .toggle-switch-label::after {
+    left: calc(100% - 1px);
+    transform: translateX(-100%);
+}
+
+.toggle-switch-label:active::after {
+    width: 35px;
+}
